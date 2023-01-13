@@ -2,38 +2,17 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 
 import { StyledProvider } from './src/providers/styles'
-import styled from 'styled-components/native'
 import { DeviceProvider } from './src/providers/device'
-import { LocalizationProvider, useLanguage } from './src/providers/languages'
-
-const TextStyled = styled.Text`
-  color: ${({ theme: { colors } }) => colors.defaultTextColor}
-  font-family: ${({ theme: { fonts } }) => fonts.family.regular}
-  font-size: ${({ theme: { fonts } }) => fonts.sizes.title}
-`
-
-const Text = () => {
-  const { translate } = useLanguage()
-
-  return <TextStyled>{translate('discoverTitle')}</TextStyled>
-}
-
-const ViewStyled = styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-`
+import { LocalizationProvider } from './src/providers/languages'
+import { Navigation } from './src/providers/navigation'
 
 export default function App() {
   return (
     <LocalizationProvider>
       <DeviceProvider>
+        <StatusBar style="dark" />
         <StyledProvider>
-          <ViewStyled>
-            <TextStyled>Github App!</TextStyled>
-            <StatusBar style="dark" />
-            <Text />
-          </ViewStyled>
+          <Navigation />
         </StyledProvider>
       </DeviceProvider>
     </LocalizationProvider>
