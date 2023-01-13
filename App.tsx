@@ -1,8 +1,10 @@
+import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 
 import { StyledProvider } from './src/providers/styles'
 import styled from 'styled-components/native'
 import { DeviceProvider } from './src/providers/device'
+import { LocalizationProvider, useLanguage } from './src/providers/languages'
 
 const TextStyled = styled.Text`
   color: ${({ theme: { colors } }) => colors.defaultTextColor}
@@ -18,13 +20,22 @@ const ViewStyled = styled.View`
 
 export default function App() {
   return (
-    <DeviceProvider>
-      <StyledProvider>
-        <ViewStyled>
-          <TextStyled>Github App!</TextStyled>
-          <StatusBar style="dark" />
-        </ViewStyled>
-      </StyledProvider>
-    </DeviceProvider>
+    <LocalizationProvider>
+      <DeviceProvider>
+        <StyledProvider>
+          <ViewStyled>
+            /* <TextStyled>Github App!</TextStyled>
+            <StatusBar style="dark" /> */
+            <Text />
+          </ViewStyled>
+        </StyledProvider>
+      </DeviceProvider>
+    </LocalizationProvider>
   )
+}
+
+const Text = () => {
+  const { translate } = useLanguage()
+
+  return <TextStyled>{translate('discoverTitle')}</TextStyled>
 }
