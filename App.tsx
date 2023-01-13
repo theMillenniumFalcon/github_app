@@ -12,6 +12,12 @@ const TextStyled = styled.Text`
   font-size: ${({ theme: { fonts } }) => fonts.sizes.title}
 `
 
+const Text = () => {
+  const { translate } = useLanguage()
+
+  return <TextStyled>{translate('discoverTitle')}</TextStyled>
+}
+
 const ViewStyled = styled.View`
   flex: 1;
   justify-content: center;
@@ -24,18 +30,12 @@ export default function App() {
       <DeviceProvider>
         <StyledProvider>
           <ViewStyled>
-            /* <TextStyled>Github App!</TextStyled>
-            <StatusBar style="dark" /> */
+            <TextStyled>Github App!</TextStyled>
+            <StatusBar style="dark" />
             <Text />
           </ViewStyled>
         </StyledProvider>
       </DeviceProvider>
     </LocalizationProvider>
   )
-}
-
-const Text = () => {
-  const { translate } = useLanguage()
-
-  return <TextStyled>{translate('discoverTitle')}</TextStyled>
 }

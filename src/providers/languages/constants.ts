@@ -1,5 +1,5 @@
 import * as Localization from 'expo-localization'
-import { readonly } from 'src/helpers/readonly'
+import { readonly } from '../../helpers/readonly'
 import { TTranslateAttrs } from './translations'
 import i18n from 'i18n-js'
 
