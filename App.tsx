@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar'
 
 import { StyledProvider } from './src/providers/styles'
 import styled from 'styled-components/native'
+import { DeviceProvider } from './src/providers/device'
 
-// Tests
 const TextStyled = styled.Text`
   color: ${({ theme: { colors } }) => colors.defaultTextColor}
   font-family: ${({ theme: { fonts } }) => fonts.family.regular}
@@ -18,11 +18,13 @@ const ViewStyled = styled.View`
 
 export default function App() {
   return (
-    <StyledProvider>
-      <ViewStyled>
-        <TextStyled>Github App!</TextStyled>
-        <StatusBar style="auto" />
-      </ViewStyled>
-    </StyledProvider>
+    <DeviceProvider>
+      <StyledProvider>
+        <ViewStyled>
+          <TextStyled>Github App!</TextStyled>
+          <StatusBar style="dark" />
+        </ViewStyled>
+      </StyledProvider>
+    </DeviceProvider>
   )
 }

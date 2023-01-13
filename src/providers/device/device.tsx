@@ -7,9 +7,13 @@ export const DeviceContext = createContext<TDeviceSettingsState>(
     deviceSettingsInitialState
 )
 
+interface deviceProviderProps {
+    children: React.ReactNode
+}
+
 // Provides device settings to the whole application, appearance, 
 // internet connection, and other stuff...
-export const DeviceProvider: React.FC = props => {
+export const DeviceProvider: React.FC<deviceProviderProps> = (props, { children }) => {
     const [data, setData] = useState(deviceSettingsInitialState)
     const { isConnected } = useNetwork()
     const scheme = useColorScheme()
@@ -28,6 +32,8 @@ export const DeviceProvider: React.FC = props => {
         <DeviceContext.Provider
             value={useMemo(() => data, [isConnected])}
             {...props}
-        />
+        >
+            {children}
+        </DeviceContext.Provider>
     )
 }
