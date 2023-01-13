@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "gen-env": "gen-env-types .env -o src/@types/env.d.ts -e .",
+    "gen-env": "gen-env-types .env -o src/@types/env/env.d.ts -e .",
     "start": "expo start",
     "dev": "expo start --tunnel --clear",
     "android": "expo start --android",
