@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+
+import { StyledProvider } from './src/providers/styles'
+import styled from 'styled-components/native'
+
+// Tests
+const TextStyled = styled.Text`
+  color: ${({ theme: { colors } }) => colors.defaultTextColor}
+  font-family: ${({ theme: { fonts } }) => fonts.family.regular}
+  font-size: ${({ theme: { fonts } }) => fonts.sizes.title}
+`
+
+const ViewStyled = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <StyledProvider>
+      <ViewStyled>
+        <TextStyled>Github App!</TextStyled>
+        <StatusBar style="auto" />
+      </ViewStyled>
+    </StyledProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
