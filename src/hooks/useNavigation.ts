@@ -7,7 +7,7 @@ export const useNavigation = () => {
     const navigateFromModal = (
         screen: SCREENS,
         params?: { [key: string]: any }
-    ) => navigate(SCREENS.appStack, { screen, ...params })
+    ) => navigate(SCREENS.appStack as never, { screen, ...params } as never)
 
     return {
         navigate,
