@@ -1,7 +1,7 @@
-import { readonly } from '../helpers/readonly'
+import { readonly } from '../../helpers/readonly'
 import { API } from './api-connection'
 import { API_PER_PAGE } from '@env'
-import { usersMapper } from './mappers'
+import { usersMapper } from './api-mappers'
 
 // Domains or resources
 const DOMAIN = readonly({
