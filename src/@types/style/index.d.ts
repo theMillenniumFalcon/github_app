@@ -1,4 +1,4 @@
-import { stylesGuide } from 'src/providers/styles'
+import { stylesGuide } from '../../providers/styles'
 
 declare module 'styled-components' {
     type Theme = typeof stylesGuide
