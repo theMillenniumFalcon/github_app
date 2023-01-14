@@ -2,7 +2,7 @@ import { StackNavigationOptions as Options } from '@react-navigation/stack'
 import React, { useLayoutEffect } from 'react'
 import { readonly } from '../helpers/readonly'
 import { useNavigation as useRNavigation } from '@react-navigation/core'
-import { FilterButton } from 'src/components/filter-button'
+import { FilterButton } from '../components/filter-button'
 import { Heading } from '../components/typographies'
 
 export const headerOptions = (title: string) =>
