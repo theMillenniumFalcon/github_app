@@ -5,6 +5,7 @@ import { StyledProvider } from './src/providers/styles'
 import { DeviceProvider } from './src/providers/device'
 import { LocalizationProvider } from './src/providers/languages'
 import { Navigation } from './src/providers/navigation'
+import { QueryProvider } from './src/providers/react-query'
 
 export default function App() {
   return (
@@ -12,7 +13,9 @@ export default function App() {
       <DeviceProvider>
         <StatusBar style="dark" />
         <StyledProvider>
-          <Navigation />
+          <QueryProvider>
+            <Navigation />
+          </QueryProvider>
         </StyledProvider>
       </DeviceProvider>
     </LocalizationProvider>
