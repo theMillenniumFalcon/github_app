@@ -1,4 +1,11 @@
 import React from 'react'
-import { View } from 'react-native'
 
-export const DiscoverScreen = () => <View />
+import { UsersContainer } from '../../containers/users-container'
+import { useHeader } from '../../hooks/useHeader'
+
+export const DiscoverScreen = () => {
+
+    useHeader('discoverTitle')
+
+    return <UsersContainer />
+}

@@ -11,3 +11,4 @@ A react native app to view github users' data
 ### Checklist
 
 - [ ] add language support using expo-localization and i18n-js
+- [ ] add a search component in discover screen

@@ -1,4 +1,11 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Content } from '../../components/typographies/typographies'
 
-export const FiltersScreen = () => <View />
+export const FiltersScreen = () => {
+    return (
+        <Content
+            title={'filtersTitle'}
+            text={'filtersText'}
+        />
+    )
+}
