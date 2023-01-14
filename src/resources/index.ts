@@ -1,4 +1,4 @@
-import { readonly } from '../helpers/readonly';
+import { readonly } from '../helpers/readonly'
 
 export const fonts = () =>
     readonly({
