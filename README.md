@@ -10,6 +10,6 @@ A react native app to view github users' data
 
 ### Checklist
 
-<!-- - [x] develop a MVP -->
+- [x] develop a MVP
 - [ ] add language support using expo-localization and i18n-js
 - [ ] add a search component in discover screen
