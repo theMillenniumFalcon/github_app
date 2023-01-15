@@ -1,7 +1,7 @@
 import { CommitDTO, IListOfUsers, RepositoryDTO, TListMapper, UserDTO } from '@api'
 import { readonly } from '../../helpers/readonly'
 
-// API response with data from all users.
+// collection of API response with data from all users.
 export const usersMapper = (collection: TListMapper) => {
     const mapped: IListOfUsers = collection.map(user => ({
         id: user.id,

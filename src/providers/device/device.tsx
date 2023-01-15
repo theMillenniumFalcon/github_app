@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext, useMemo } from 'react'
-import { deviceSettingsInitialState, TDeviceSettingsState } from './state'
 import { useColorScheme } from 'react-native'
+
+import { deviceSettingsInitialState, TDeviceSettingsState } from './state'
 import { useNetwork } from '../../hooks/useNetwork'
 
 export const DeviceContext = createContext<TDeviceSettingsState>(

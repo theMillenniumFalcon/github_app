@@ -1,7 +1,8 @@
 import React, { ReactNode, FC, useMemo } from 'react'
-import { useFonts } from 'expo-font'
-import { fonts } from '../../resources'
 import { ThemeProvider } from 'styled-components/native'
+import { useFonts } from 'expo-font'
+
+import { fonts } from '../../resources'
 import { stylesGuide } from './styles-guide'
 import { Spinner } from '../../components/spinner'
 

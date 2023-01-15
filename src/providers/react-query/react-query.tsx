@@ -1,7 +1,11 @@
 import React from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { LogBox } from 'react-native'
+import { QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient()
+import { queryClient } from './query-client'
+
+// Setting a timer for a long period of time...
+LogBox.ignoreLogs(['Setting a timer'])
 
 // It makes fetching, caching, synchronizing and updating
 // server state in your React applications a breeze.

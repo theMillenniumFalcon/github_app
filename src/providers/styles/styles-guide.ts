@@ -1,6 +1,7 @@
 import { readonly } from '../../helpers/readonly'
 import { size, parseSize } from './utilities'
 
+// Use it for any color property or backgrounds, it should not have loose colors.
 const palette = readonly({
     purple: '#6647F4',
     black: '#15202B',
@@ -16,6 +17,7 @@ const colors = readonly({
     defaultTextColor: palette.black,
 })
 
+// Use it for any text in the project and keep it consistent.
 const fontSizes = readonly({
     title: size(22),
     head: size(16),
@@ -33,6 +35,7 @@ const fonts = readonly({
     },
 })
 
+// Use for padding, margins, or anything you need to set spaces between elements.
 const gaps = readonly({
     small: size(8),
     normal: size(12),
@@ -42,6 +45,8 @@ const gaps = readonly({
     extraBig: size(42),
 })
 
+// UX-based project style guide used to extend the
+// @type {DefaultTheme} type from the @module styled-components library.
 export const stylesGuide = readonly({
     colors,
     fonts,

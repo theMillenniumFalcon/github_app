@@ -13,7 +13,5 @@ export const useNetwork = () => {
         }
     }, [isConnected])
 
-    return {
-        isConnected,
-    }
+    return { isConnected }
 }

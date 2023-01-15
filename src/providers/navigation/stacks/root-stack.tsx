@@ -1,5 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
+
 import { DEFAULT_SCREENS_OPTIONS, SCREENS } from '../constants'
 import { AppNavigator } from './app-stack'
 

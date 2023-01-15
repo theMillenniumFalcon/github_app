@@ -1,4 +1,5 @@
 import { StackNavigationOptions } from '@react-navigation/stack'
+
 import { readonly } from '../../helpers/readonly'
 import { stylesGuide } from '../styles'
 
